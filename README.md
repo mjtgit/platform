@@ -1,6 +1,6 @@
 # platform
 
-> 基于vue admin template开源项目的基础之上开发。
+> 在vue admin template开源项目的基础之上二次开发。
 
 ## Project setup
 
