@@ -37,7 +37,7 @@ export const constantRoutes = [
 
   {
     path: '/404',
-    component: () => import('@/views/404'),
+    component: () => import('@/views/error-page/404'),
     hidden: true
   },
 
@@ -51,28 +51,6 @@ export const constantRoutes = [
         name: 'Dashboard',
         component: () => import('@/views/dashboard/index'),
         meta: { title: 'dashboard', icon: 'el-icon-s-home' }
-      }
-    ]
-  },
-
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'example', icon: 'el-icon-s-help' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'tree', icon: 'tree' }
       }
     ]
   },
@@ -138,7 +116,7 @@ export const constantRoutes = [
     ]
   },
 
-  // 404 page must be placed at the end !!!
+  // 404页必须放在末尾 !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
 
