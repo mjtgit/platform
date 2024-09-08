@@ -54,6 +54,42 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/system',
+    component: Layout,
+    redirect: '/system/monitorJob',
+    name: 'system',
+    meta: {
+      title: '系统管理',
+      icon: 'el-icon-s-tools'
+    },
+    children: [
+      {
+        path: 'user',
+        name: 'user',
+        component: () => import('@/views/system/user/index'),
+        meta: { title: '用户管理' }
+      },
+      {
+        path: 'dept',
+        name: 'dept',
+        component: () => import('@/views/system/dept/index'),
+        meta: { title: '部门管理' }
+      },
+      {
+        path: 'menu',
+        name: 'menu',
+        component: () => import('@/views/system/menu'),
+        meta: { title: '菜单管理' }
+      },
+      {
+        path: 'role',
+        name: 'role',
+        component: () => import('@/views/system/role/index'),
+        meta: { title: '角色管理' }
+      }
+    ]
+  },
 
   {
     path: '/nested',
