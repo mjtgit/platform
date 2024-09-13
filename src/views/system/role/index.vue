@@ -449,7 +449,7 @@ export default {
     // 新增按钮操作
     handleAdd() {
       this.reset()
-      this.getMenuTreeselect()
+      // this.getMenuTreeselect()
       this.open = true
       this.title = '添加角色'
     },

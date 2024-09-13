@@ -15,6 +15,20 @@ import i18n from './lang' // internationalization
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import { resetForm } from '@/utils'
+
+// 全局方法挂载
+Vue.prototype.resetForm = resetForm
+
+// 分页组件
+import Pagination from '@/components/Pagination'
+// 自定义表格工具组件
+import RightToolbar from '@/components/RightToolbar'
+
+// 全局组件挂载
+Vue.component('Pagination', Pagination)
+Vue.component('RightToolbar', RightToolbar)
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

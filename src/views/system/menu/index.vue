@@ -437,7 +437,7 @@ export default {
     // 新增按钮操作
     handleAdd(row) {
       this.reset()
-      this.getTreeselect()
+      // this.getTreeselect()
       if (row != null && row.id) {
         this.disabledTree = true
         this.form.parentId = row.id
